@@ -1,0 +1,11 @@
+package com.example.weatherapiconsuming.dto;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record DaysListResponseDTO(@JsonProperty("tempmax") String tempMax,
+                                  @JsonProperty("tempmin") String tempMin,
+                                  @JsonProperty("temp") String temp,
+                                  @JsonProperty("datetime") String dateTime,
+                                  @JsonProperty("humidity") String humidity,
+                                  @JsonProperty("conditions") String conditions) {
+}
