@@ -1,4 +1,4 @@
-package com.example.weatherapiconsuming.dto;
+package com.example.weatherapiconsuming.controller.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
