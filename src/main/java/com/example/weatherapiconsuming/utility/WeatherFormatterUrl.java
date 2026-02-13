@@ -11,13 +11,13 @@ import java.net.URI;
 
 @Service
 @Slf4j
-public class FormatterWeatherUrl {
+public class WeatherFormatterUrl {
 
     private final RestTemplate restTemplate;
 
     private String apiKey;
 
-    public FormatterWeatherUrl(RestTemplate restTemplate, @Value("${API_KEY}") String apiKey) {
+    public WeatherFormatterUrl(RestTemplate restTemplate, @Value("${API_KEY}") String apiKey) {
         this.restTemplate = restTemplate;
         this.apiKey = apiKey;
     }
