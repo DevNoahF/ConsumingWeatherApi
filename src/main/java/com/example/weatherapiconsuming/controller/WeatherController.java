@@ -19,22 +19,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/weather")
 @RequiredArgsConstructor
-
-
 public class WeatherController {
     private final WeatherService weatherService;
 
-    @Operation(summary = "Send a request for api weather, and return a response by DTO")
+    @Operation(summary = "Get weather data from api weather")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "ok - return the specifics weather api by DTO"),
-            @ApiResponse(responseCode = "404", description = "not found - the api weather have a error, please try change the api key")
+            @ApiResponse(responseCode = "200", description = "OK -  returned weather data"),
+            @ApiResponse(responseCode = "404", description = "NOT FOUND - please check your API key")
     })
+
     @PostMapping
-    public ResponseEntity<WeatherResponseDTO> consultarDados(@Parameter(name = "dto", description = "send the city, state, country, init date, final date") @RequestBody WeatherRequestDTO dto){
+    public ResponseEntity<WeatherResponseDTO> GetData(
+            @Parameter(description = "City, state, country, and date range(initial date and finalDate)")
+            @RequestBody WeatherRequestDTO dto) {
         try {
-            return ResponseEntity.ok(weatherService.buscarClima(dto));
+            return ResponseEntity.ok(weatherService.getWeatherApi(dto));
         } catch (ErrorJsonApiResponseException ex) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
+
+
 }

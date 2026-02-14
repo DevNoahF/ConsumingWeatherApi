@@ -1,6 +1,7 @@
 package com.example.weatherapiconsuming.utility;
 
 import com.example.weatherapiconsuming.controller.dto.WeatherRequestDTO;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -14,8 +15,7 @@ import java.net.URI;
 public class WeatherFormatterUrl {
 
     private final RestTemplate restTemplate;
-
-    private String apiKey;
+    private final String apiKey;
 
     public WeatherFormatterUrl(RestTemplate restTemplate, @Value("${API_KEY}") String apiKey) {
         this.restTemplate = restTemplate;
