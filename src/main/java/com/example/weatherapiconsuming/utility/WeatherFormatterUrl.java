@@ -4,23 +4,23 @@ import com.example.weatherapiconsuming.controller.dto.WeatherRequestDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 
-@Service
+@Component
 @Slf4j
+@RequiredArgsConstructor
 public class WeatherFormatterUrl {
 
     private final RestTemplate restTemplate;
-    private final String apiKey;
 
-    public WeatherFormatterUrl(RestTemplate restTemplate, @Value("${API_KEY}") String apiKey) {
-        this.restTemplate = restTemplate;
-        this.apiKey = apiKey;
-    }
+    @Value("${API_KEY}")
+    private String apiKey;
+
 
     public String formatUrl(WeatherRequestDTO dto) {
         log.info("iniciando formatação da url");

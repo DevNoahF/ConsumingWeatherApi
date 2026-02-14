@@ -1,7 +1,7 @@
 spring:
   application:
     name: WeatherApiConsuming
-    Key: ${API_KEY}
+    ApiKey: ${API_KEY}
   cache:
     type: redis
     redis:
