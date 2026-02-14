@@ -10,3 +10,4 @@ spring:
     redis:
       port: 6379
       host: localhost
+      client-name: cache
