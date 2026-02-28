@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -29,6 +28,8 @@ public class WeatherFormatterUrl {
                 .pathSegment(dto.city() + "," + dto.state() + "," + dto.country())
                 .pathSegment(dto.initDate().toString())
                 .pathSegment(dto.finalDate().toString())
+                .queryParam("unitGroup", "metric")
+                .queryParam("lang", "pt")
                 .queryParam("key", apiKey)
                 .build()
                 .toUri();
