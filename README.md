@@ -1,6 +1,6 @@
 # Weather API Consuming
 
-Uma aplicação Spring Boot que consome dados meteorológicos em tempo real através de integração com APIs de clima.
+Uma aplicação Spring Boot que consome dados meteorológicos em tempo real através de integração com APIs de clima. Utilizando REDIS para cache.
 
 
 ## Requisitos
