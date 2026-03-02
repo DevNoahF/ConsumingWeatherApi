@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/weather")
 @RequiredArgsConstructor
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin(origins = "${cors.allowed-origins:http://localhost:4200}")
 public class WeatherController {
     private final WeatherService weatherService;
 
@@ -27,7 +27,7 @@ public class WeatherController {
     })
 
     @PostMapping
-    public ResponseEntity<WeatherResponseDTO> GetData(
+    public ResponseEntity<WeatherResponseDTO> getData(
             @Parameter(description = "City, state, country, and date range(initial date and finalDate)")
             @RequestBody WeatherRequestDTO dto) {
         try {
