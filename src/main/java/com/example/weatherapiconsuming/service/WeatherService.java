@@ -1,7 +1,7 @@
 package com.example.weatherapiconsuming.service;
 
-import com.example.weatherapiconsuming.controller.dto.WeatherRequestDTO;
-import com.example.weatherapiconsuming.controller.dto.WeatherResponseDTO;
+import com.example.weatherapiconsuming.dto.WeatherRequestDTO;
+import com.example.weatherapiconsuming.dto.WeatherResponseDTO;
 import com.example.weatherapiconsuming.infra.exceptions.ErrorJsonApiResponseException;
 import com.example.weatherapiconsuming.utility.WeatherFormatterUrl;
 import com.fasterxml.jackson.databind.ObjectMapper;

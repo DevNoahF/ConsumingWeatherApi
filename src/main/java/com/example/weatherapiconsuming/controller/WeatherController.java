@@ -1,7 +1,7 @@
 package com.example.weatherapiconsuming.controller;
 
-import com.example.weatherapiconsuming.controller.dto.WeatherRequestDTO;
-import com.example.weatherapiconsuming.controller.dto.WeatherResponseDTO;
+import com.example.weatherapiconsuming.dto.WeatherRequestDTO;
+import com.example.weatherapiconsuming.dto.WeatherResponseDTO;
 import com.example.weatherapiconsuming.infra.exceptions.ErrorJsonApiResponseException;
 import com.example.weatherapiconsuming.service.WeatherService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -11,14 +11,12 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/weather")
 @RequiredArgsConstructor
+@CrossOrigin("http://localhost:4200")
 public class WeatherController {
     private final WeatherService weatherService;
 

@@ -1,4 +1,4 @@
-package com.example.weatherapiconsuming.controller.dto;
+package com.example.weatherapiconsuming.dto;
 
 import java.io.Serializable;
 import java.time.LocalDate;
