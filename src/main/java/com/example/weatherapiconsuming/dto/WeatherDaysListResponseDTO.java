@@ -1,4 +1,4 @@
-package com.example.weatherapiconsuming.controller.dto;
+package com.example.weatherapiconsuming.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -13,5 +13,6 @@ public record WeatherDaysListResponseDTO(@JsonProperty("tempmax") String tempMax
                                          @JsonProperty("datetimeEpoch") String datetimeEpoch,
                                          @JsonProperty("datetime") String dateTime,
                                          @JsonProperty("humidity") String humidity,
+                                         @JsonProperty("icon") String icon,
                                          @JsonProperty("conditions") String conditions) implements Serializable {
 }

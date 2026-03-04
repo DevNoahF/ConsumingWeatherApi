@@ -1,6 +1,6 @@
 package com.example.weatherapiconsuming.utility;
 
-import com.example.weatherapiconsuming.controller.dto.WeatherRequestDTO;
+import com.example.weatherapiconsuming.dto.WeatherRequestDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
