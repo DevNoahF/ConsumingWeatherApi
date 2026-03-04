@@ -1,7 +1,7 @@
 package com.example.weatherapiconsuming.controller;
 
-import com.example.weatherapiconsuming.controller.dto.WeatherRequestDTO;
-import com.example.weatherapiconsuming.controller.dto.WeatherResponseDTO;
+import com.example.weatherapiconsuming.dto.WeatherRequestDTO;
+import com.example.weatherapiconsuming.dto.WeatherResponseDTO;
 import com.example.weatherapiconsuming.infra.exceptions.ErrorJsonApiResponseException;
 import com.example.weatherapiconsuming.service.WeatherService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/weather")
 @RequiredArgsConstructor
-@CrossOrigin("${cors.allowed-origins:http://localhost:4200}")
+@CrossOrigin("http://localhost:4200 ")
 public class WeatherController {
     private final WeatherService weatherService;
 
