@@ -3,7 +3,7 @@ spring:
     name: WeatherApiConsuming
     ApiKey: ${API_KEY}
     cors:
-      allowed-origins: "http://localhost:4200"
+      allowed-origins: "https://weather-frontend-qxwf.onrender.com"
   cache:
     type: redis
     redis:

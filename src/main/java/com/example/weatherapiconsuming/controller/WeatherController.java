@@ -14,9 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/weather")
 @RequiredArgsConstructor
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("https://weather-frontend-qxwf.onrender.com")
 public class WeatherController {
     private final WeatherService weatherService;
 
