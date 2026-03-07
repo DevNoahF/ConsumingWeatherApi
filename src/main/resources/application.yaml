@@ -7,7 +7,11 @@ spring:
   cache:
     type: redis
     redis:
-      time-to-live: 1h
+      time-to-live: 5h
   data:
     redis:
-      url: ${SPRING_DATA_REDIS_URL:redis://localhost:6379}
+      url: ${REDIS_URL:redis://localhost:6379}
+
+server:
+  ssl:
+    enabled: true

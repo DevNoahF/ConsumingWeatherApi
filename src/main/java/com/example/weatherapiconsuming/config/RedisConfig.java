@@ -1,5 +1,7 @@
 package com.example.weatherapiconsuming.config;
 
+import io.lettuce.core.ClientOptions;
+import io.lettuce.core.SslOptions;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,9 +39,9 @@ public class RedisConfig {
         LettuceClientConfiguration.LettuceClientConfigurationBuilder clientConfigBuilder =
             LettuceClientConfiguration.builder();
 
-        // Enable SSL if URL starts with "rediss://"
+        // Enable SSL if URL starts with "rediss://" (Upstash uses TLS)
         if (redisUrl.startsWith("rediss://")) {
-            clientConfigBuilder.useSsl();
+            clientConfigBuilder.useSsl().disablePeerVerification();
         }
 
         return new LettuceConnectionFactory(redisConfig, clientConfigBuilder.build());
