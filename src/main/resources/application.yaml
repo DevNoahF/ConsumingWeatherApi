@@ -1,7 +1,6 @@
 spring:
   application:
     name: WeatherApiConsuming
-    ApiKey: ${API_KEY}
     cors:
       allowed-origins: "https://weather-frontend-qxwf.onrender.com"
   cache:

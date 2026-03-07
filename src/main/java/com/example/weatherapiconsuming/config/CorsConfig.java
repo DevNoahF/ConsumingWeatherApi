@@ -10,7 +10,9 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry){
         registry.addMapping("/**")
-                .allowedOrigins("https://weather-frontend-qxwf.onrender.com/")
-                .allowedMethods("POST");
+                .allowedOrigins("https://weather-frontend-qxwf.onrender.com")
+                .allowedMethods("POST")
+                .allowedMethods("GET");
+
     }
 }
