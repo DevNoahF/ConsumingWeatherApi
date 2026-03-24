@@ -5,6 +5,9 @@ Uma aplicação Spring Boot que consome dados meteorológicos em tempo real atra
 ## Site:
 https://consumingweatherbr.qzz.io/
 
+## Repositorio Frontend
+https://github.com/DevNoahF/ConsumingWeatherBr-FrontEnd
+
 ## Requisitos
 
 - Docker (para rodar a aplicação)
