@@ -3,7 +3,7 @@
 Uma aplicação Spring Boot que consome dados meteorológicos em tempo real através de integração com APIs de clima. Utilizando REDIS para cache.
 
 ## Site:
-https://weather-frontend-qxwf.onrender.com
+https://consumingweatherbr.qzz.io/
 
 ## Requisitos
 
